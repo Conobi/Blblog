@@ -10,19 +10,19 @@ function beautify($string) {
 
 function artInfo($art) {
   $art = 'articles/'.$art;
-    $art_parts = explode("---", file_get_contents($art));
-    $art_header = $art_parts[0];
-    //Retourne le timestamp de dernière modif, le titre, la description, et l'auteur en y rendant joli
-    $lines = preg_split("/((\r?\n)|(\r\n?))/", $art_header);
-    $i = 0;
-    $n = count($lines) - 1;
-    while($i < $n) {
-      $line_result = explode(':', $lines[$i], 2);
-      $art_info['timestamp'] = filectime($art);
-      $art_info[$line_result[0]] = beautify($line_result[1]);
-      $i++;
-    }
-    return $art_info;
+  $art_parts = explode("---", file_get_contents($art));
+  $art_header = $art_parts[0];
+  //Retourne le timestamp de dernière modif, le titre, la description, et l'auteur en y rendant joli
+  $lines = preg_split("/((\r?\n)|(\r\n?))/", $art_header);
+  $i = 0;
+  $n = count($lines) - 1;
+  while($i < $n) {
+    $line_result = explode(':', $lines[$i], 2);
+    $art_info['timestamp'] = filectime($art);
+    $art_info[$line_result[0]] = beautify($line_result[1]);
+    $i++;
+  }
+  return $art_info;
 }
 
 function artTest($art) {
@@ -95,4 +95,16 @@ function view($include) {
 
 function redirect($url) {
   header('Location: '.$url);
+}
+
+function mdParser($string) {
+  include 'includes/Parsedown.php';
+  $Parsedown = new Parsedown();
+  //Règles persos
+  $string = str_replace('- [ ]', '<input type="checkbox" class="task-list-item-checkbox" disabled>', $string);
+  $string = str_replace('[ ]', '<input type="checkbox" class="task-list-item-checkbox" disabled>', $string);
+  $string = str_ireplace('- [x]', '<input type="checkbox" class="task-list-item-checkbox" checked disabled>', $string);
+  $string = str_ireplace('[x]', '<input type="checkbox" class="task-list-item-checkbox" checked disabled>', $string);
+  $string = $Parsedown->setBreaksEnabled(true)->text($string);
+  return $string;
 }

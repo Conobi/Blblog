@@ -1,17 +1,14 @@
 <?php
-include 'includes/Parsedown.php';
 include 'includes/Helpers.php';
-$Parsedown = new Parsedown();
-$nb_del_lines = 4;
 
 if(isset($_GET['a'])) {
   $art_name = $_GET['a'];
   if(file_exists('articles/'.$art_name.'.md')) {
     $article = file_get_contents('articles/'.$art_name.'.md');
     //On supprime les premières lignes
-    $article = implode("\n", array_slice(explode("\n", $article), $nb_del_lines));
+    $article = explode("---", $article,2)[1];
     //On met en place le parser
-    $article = $Parsedown->setBreaksEnabled(true)->text($article);
+    $article = mdParser($article);
     //On met le bon titre
     $art_info = artInfo($art_name.'.md');
     $app_title = $art_info['title'].' • '. $config['short_blog_name'];
