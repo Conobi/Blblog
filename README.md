@@ -19,7 +19,7 @@ author: Kiyoshi`
 cover: assets/img/author/bg.jpg //(Optional) It can be either a file or an url.
 tags: configuration blblog markdown php //(Optional)
 ---
-_Here is the content of _your article_
+Here is the content of _your article_
 ```
 And that is all !
 
