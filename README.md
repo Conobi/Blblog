@@ -1,5 +1,5 @@
 # Blblog
-Blblog is a minimalist blog using just markdown files as a playback medium. It is strongly inspired by [Telegra.ph](https://telegra.ph), [Medium](https://medium.com) or [Hexo](https://hexo.io).
+Blblog is a minimalist blog using just markdown files. It is strongly inspired by [Telegra.ph](https://telegra.ph), [Medium](https://medium.com) or [Hexo](https://hexo.io).
 This project has been created for a personnal usage, but you are welcome to make this project better!
 ## How to install?
 Simply use 
