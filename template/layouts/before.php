@@ -25,7 +25,7 @@
     <meta property="og:type" content="<?= $page['type'] ?>">
     <meta property="og:title" content="<?= $page['title'] ?>">
     <meta property="og:description" content="<?= $page['desc'] ?>">
-    <meta property="og:url" content="<?= $config['base_url'] //À TERMINER ! ?>">
+    <meta property="og:url" content="<?= (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>">
     <meta property="og:site_name" content="<?= $config['short_blog_name'] ?>">
     <meta property="og:image" content="<?= $config['base_url'].$page['cover'] ?>">
     <meta name="twitter:card" content="summary">
