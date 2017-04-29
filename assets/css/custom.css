@@ -119,8 +119,12 @@
   bottom: 0;
   top: 0;
   position: absolute;
-  background-image: url(../../assets/img/static/bg_mask.png);
+  background: url(../../assets/img/static/bg_mask.png);
   opacity: 0.5;
+}
+
+.index-thumbs::before {
+  background: url(../../assets/img/static/bg_mask.png), linear-gradient(transparent, black);
 }
 
 .parallax::before {
@@ -194,6 +198,34 @@ header h1 {
   font-size: 35px;
   line-height: 37px;
   margin: 21px 21px 12px;
+}
+
+.button {
+  font-family: CustomSansSerif,'Lucida Grande',Arial,sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 17px;
+  color: #000;
+  text-decoration: none;
+  border: 2px solid #333;
+  border-radius: 16px;
+  text-transform: uppercase;
+  padding: 2px 12px;
+  margin-top: 21px;
+  background-color: #fff;
+}
+
+.button .material-icons {
+  font-size: 17px;
+  line-height: 25px;
+  vertical-align: bottom;
+}
+
+.article-bottom {
+  display: flex;
+}
+.article-bottom .button{
+  margin: auto;
 }
 
 article p, ul, ol {
