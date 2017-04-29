@@ -176,7 +176,29 @@
   margin-top: 1%;
 }
 
-header address {
+.cover-header {
+  height: 420px;
+}
+
+.cover-header .center {
+  font-family: CustomSansSerif,'Lucida Grande',Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cover-header .section {
+  display: block;
+  margin: auto;
+}
+
+.cover-header address {
+  font-size: 1.64rem;
+  line-height: 110%;
+  margin: .82rem 0 .656rem 0;
+  font-style: normal;
+}
+
+.raw-header address {
   font-family: CustomSansSerif,'Lucida Grande',Arial,sans-serif;
   font-size: 15px;
   line-height: 18px;
@@ -185,13 +207,13 @@ header address {
   margin: 12px 21px;
 }
 
-header address a {
+.raw-header address a {
   color: #79828B;
   -webkit-tap-highlight-color: rgba(0,0,0,.44);
   text-decoration: none;
   border-bottom: .1em solid rgba(0,0,0,.2);
 }
-header h1 {
+.raw-header h1 {
   font-family: CustomSansSerif,'Lucida Grande',Arial,sans-serif;
   font-weight: 700;
   font-style: normal;

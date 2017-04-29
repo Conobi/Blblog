@@ -26,4 +26,3 @@ And that is all !
 ## To do
 - [ ] Add custom configuration for nginx and apache
 - [ ] Support for favicons
-- [ ] Parallax cover in article page

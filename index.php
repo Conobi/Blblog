@@ -13,7 +13,7 @@ foreach ($articles as $key => $art) {
 $articles = timeSort($articles);
 //On affiche le bon titre
 $page = array(
-  'title' => $config['short_blog_name'].' • '. $config['blog_desc'],
+  'title' => $config['short_blog_name'].' • '. $config['complete_blog_name'],
   'desc' => $config['blog_desc'],
   'type' => 'website',
   'cover' => 'assets/img/static/bg.jpg'
