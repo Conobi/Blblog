@@ -27,4 +27,3 @@ And that is all !
 - [ ] Add custom configuration for nginx and apache
 - [ ] Support for favicons
 - [ ] Parallax cover in article page
-- [ ] Menu buttons

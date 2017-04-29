@@ -20,7 +20,7 @@ if(isset($_GET['a'])) {
     if(isset($art_info['cover'])) {
       $page['cover'] = $art_info['cover'];
     } else {
-      $page['cover'] = 'assets/img/meta/cover.jpg';
+      $page['cover'] = 'assets/img/static/bg.jpg';
     }
     //On peut lancer la vue
     view('article.php');
