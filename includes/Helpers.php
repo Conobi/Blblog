@@ -83,6 +83,7 @@ function errorHandler($errno, $errstr, $errfile, $errline) {
   include_once('template/layouts/before.php');
   include_once('template/pages/error.php');
   include_once('template/layouts/after.php');
+  die();
 }
 
 set_error_handler("errorHandler");

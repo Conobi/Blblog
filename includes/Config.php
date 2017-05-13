@@ -1,7 +1,7 @@
 <?php
 
 return array(
-  'base_url' => 'http://localhost/Blblog',
+  'base_url' => 'http://localhost/',
   'short_blog_name' => 'Blblog',
   'complete_blog_name' => 'My personal blog',
   'blog_desc' => 'Technologies, politics and more',
