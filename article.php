@@ -2,7 +2,7 @@
 include 'includes/Helpers.php';
 
 if(isset($_GET['a'])) {
-  $art_name = $_GET['a'];
+  $art_name = str_replace('/article/', '', $_GET['a']);
   if(file_exists('articles/'.$art_name.'.md')) {
     $article = file_get_contents('articles/'.$art_name.'.md');
     //On supprime les premières lignes
