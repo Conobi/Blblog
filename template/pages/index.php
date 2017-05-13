@@ -8,7 +8,7 @@
 </div>
 <div class="index-main">
   <?php foreach ($articles as $key => $art) : ?>
-  <a href='article.php?a=<?=substr($key, 0, -3)?>' class="waves-effect waves-light index-thumbs"<?php if(isset($art['cover'])) { echo(' style="background-image: url(\''.htmlspecialchars_decode($art['cover'], ENT_QUOTES).'\');"');} ?>>
+  <a href='article/<?=substr($key, 0, -3)?>' class="waves-effect waves-light index-thumbs"<?php if(isset($art['cover'])) { echo(' style="background-image: url(\''.htmlspecialchars_decode($art['cover'], ENT_QUOTES).'\');"');} ?>>
     <div class="thumbs-desc">
       <h1><?=$art['title']?></h1>
       <address>

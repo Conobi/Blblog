@@ -5,7 +5,9 @@
     </header>
     <article>
       <p><?= $errstr ?></p></br>
-      <a class="btn waves-effect waves-light col s2 grey darken-1 white-text" href="<?= $config["base_url"] ?>"><?= $lang['return']?></a>
+      <div class="article-bottom">
+        <a class="button" href="<?= $config["base_url"] ?>"><i class="material-icons">arrow_back</i> <?= $lang['return']?></a>
+      </div>
     </article>
   </div>
 </div>

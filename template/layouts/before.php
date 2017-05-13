@@ -10,13 +10,15 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="<?= $config['base_url'] ?>/assets/css/materialize.min.css"  media="screen,projection"/>
+    <!--Favicons-->
+    <link rel="icon" type="image/png" href="<?= $config['base_url'] ?>/assets/img/meta/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="<?= $config['base_url'] ?>/assets/img/meta/favicon-16x16.png" sizes="16x16" />
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-    <link type="text/css" rel="stylesheet" href="assets/css/custom.css"  media="screen,projection"/>
-    <link type="text/css" rel="stylesheet" href="assets/css/fonts.css"  media="screen,projection"/>
-    <link type="text/css" rel="stylesheet" href="assets/css/colors.php"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="<?= $config['base_url'] ?>/assets/css/custom.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="<?= $config['base_url'] ?>/assets/css/fonts.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="<?= $config['base_url'] ?>/assets/css/colors.php"  media="screen,projection"/>
     <!-- SEO things -->
     <meta name="application-name" content="<?= $config['short_blog_name'] ?>">
     <meta name="description" content="<?= $config['blog_desc'] ?>">
@@ -25,9 +27,9 @@
     <meta property="og:type" content="<?= $page['type'] ?>">
     <meta property="og:title" content="<?= $page['title'] ?>">
     <meta property="og:description" content="<?= $page['desc'] ?>">
-    <meta property="og:url" content="<?= (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>">
+    <meta property="og:url" content="<?= $config['base_url'].$_SERVER['REQUEST_URI'] ?>">
     <meta property="og:site_name" content="<?= $config['short_blog_name'] ?>">
-    <meta property="og:image" content="<?= $config['base_url'].$page['cover'] ?>">
+    <meta property="og:image" content="<?= $page['cover'] ?>">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:description" content="<?= $page['desc'] ?>">
     <meta name="twitter:title" content="<?= $page['title'] ?>">

@@ -259,6 +259,10 @@ article p, ul, ol {
   margin: 0 21px 8px;
 }
 
+article p:first-child {
+  margin-top: 21px;
+}
+
 article ol {
   padding: inherit;
 }
