@@ -4,5 +4,4 @@ Options +FollowSymlinks
 RewriteEngine On
 RewriteRule ^article/$ article.php
 RewriteRule ^article/([a-z0-9\-]+)$ article.php?a=$1 [L]
-Redirect ^article/$ /
 </ifModule>
