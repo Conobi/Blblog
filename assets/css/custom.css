@@ -17,7 +17,7 @@
   display: inline-block;
   height: 350px;
   margin: 7.5px;
-  background-size: cover;
+  background-size: cover !important;
   position: relative;
 }
 
@@ -125,7 +125,6 @@
 
 .index-thumbs::before {
   background: url(../../assets/img/static/bg_mask.png), linear-gradient(transparent, black);
-  background-size: cover;
   opacity: 0.3;
 }
 
