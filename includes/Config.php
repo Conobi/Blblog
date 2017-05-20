@@ -1,7 +1,7 @@
 <?php
 
 return array(
-  'base_url' => 'http://localhost/', //Replace by the url root of Blblog
+  'base_url' => 'http://localhost', //Replace by the url root of Blblog
   'short_blog_name' => 'Blblog',
   'complete_blog_name' => 'My personal blog',
   'blog_desc' => 'Technologies, toots and pwets',

@@ -1,7 +1,7 @@
 <?php
 include 'includes/Helpers.php';
 $test_url = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-if($test_url != $config['base_url'] xor $test_url != $config['base_url'].'/index.php'){} else {
+if($test_url != $config['base_url'].'/' xor $test_url != $config['base_url'].'/index.php'){} else {
   $config['base_url'] = str_replace('/index.php', '/', $test_url);
   trigger_error($lang['url_not_configured']);
 }
@@ -21,7 +21,7 @@ $page = array(
   'title' => $config['short_blog_name'].' • '. $config['complete_blog_name'],
   'desc' => $config['blog_desc'],
   'type' => 'website',
-  'cover' => $config['base_url'].'assets/img/static/bg.jpg'
+  'cover' => $config['base_url'].'/assets/img/static/bg.jpg'
 );
 
 view('index.php');
