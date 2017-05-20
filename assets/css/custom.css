@@ -119,12 +119,11 @@
   bottom: 0;
   top: 0;
   position: absolute;
-  background: url(../../assets/img/static/bg_mask.png);
-  opacity: 0.5;
 }
 
 .index-thumbs::before {
   background: url(../../assets/img/static/bg_mask.png), linear-gradient(transparent, black);
+  opacity: 0.3;
 }
 
 .parallax::before {
