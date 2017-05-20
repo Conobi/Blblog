@@ -119,6 +119,8 @@
   bottom: 0;
   top: 0;
   position: absolute;
+  background: url(../../assets/img/static/bg_mask.png);
+  opacity: 0.5;
 }
 
 .index-thumbs::before {
