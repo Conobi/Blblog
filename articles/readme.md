@@ -13,7 +13,7 @@ Simply use
 You will need to enable the Module rewrite, by using `sudo a2enmod rewrite`.
 If the url rewriting doesn't works, this is probably due to your configuration of Apache2 ; to correct this, edit your `apache2.conf` file in `/etc/apache2` (on linux based distros) and replace any `AllowOverride None` to `AllowOverride All`.
 ### On Nginx
-Replace `/etc/nginx/sites-available/` by [this configuration](https://gist.github.com/Donokami/363712db9023cbeb72d61312ca07db56),
+Replace `/etc/nginx/sites-available/default` by [this configuration](https://gist.github.com/Donokami/363712db9023cbeb72d61312ca07db56),
 Then restart Nginx using
 ```
 nginx -t
