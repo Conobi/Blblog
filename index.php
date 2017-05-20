@@ -21,7 +21,7 @@ $page = array(
   'title' => $config['short_blog_name'].' • '. $config['complete_blog_name'],
   'desc' => $config['blog_desc'],
   'type' => 'website',
-  'cover' => 'assets/img/static/bg.jpg'
+  'cover' => $config['base_url'].'assets/img/static/bg.jpg'
 );
 
 view('index.php');
