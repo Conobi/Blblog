@@ -17,7 +17,7 @@
   display: inline-block;
   height: 350px;
   margin: 7.5px;
-  background-size: cover;
+  background-size: cover !important;
   position: relative;
 }
 
@@ -119,6 +119,8 @@
   bottom: 0;
   top: 0;
   position: absolute;
+  background: url(../../assets/img/static/bg_mask.png);
+  opacity: 0.5;
 }
 
 .index-thumbs::before {
