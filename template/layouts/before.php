@@ -1,4 +1,9 @@
-<?php global $page, $config; ?>
+<?php
+  global $page, $config;
+  if(substr($page['cover'], 0, 3) == "../") {
+    $page['cover'] = $config['base_url'].substr($page['cover'], 3, 0);
+  }
+?>
 <!DOCTYPE html>
 <html lang="<?= substr($config['language'], 0, 2) ?>" prefix="og: http://ogp.me/ns#">
   <head>
