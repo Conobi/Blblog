@@ -40,7 +40,7 @@
     <meta name="twitter:title" content="<?= $page['title'] ?>">
     <meta name="twitter:image" content="<?= $page['cover'] ?>">
     <?php if(isset($GLOBALS['art_info'])): global $art_info; ?>
-    <meta name="author" content="<?= $art_info['author'] ?>">
+    <meta nproperty="article:author" content="<?= $art_info['author'] ?>">
     <meta property="article:modified_time" content="<?= date('c', $art_info['timestamp']) ?>">
     <meta property="og:updated_time" content="<?= date('c', $art_info['timestamp']) ?>">
   <?php endif; ?>
