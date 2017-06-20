@@ -18,9 +18,9 @@ if(isset($_GET['a'])) {
       'type' => 'article',
     );
     if(isset($art_info['cover'])) {
-      $page['cover'] = $config['base_url'].'/'.$art_info['cover'];
+      $page['cover'] = $art_info['cover'];
     } else {
-      $page['cover'] = $config['base_url'].'/assets/img/static/bg.jpg';
+      $page['cover'] = '../assets/img/static/bg.jpg';
     }
     //On peut lancer la vue
     view('article.php');
