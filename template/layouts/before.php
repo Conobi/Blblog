@@ -1,7 +1,7 @@
 <?php
   global $page, $config;
   if(substr($page['cover'], 0, 3) == "../") {
-    $page['cover'] = $config['base_url'].substr($page['cover'], 3, 0);
+    $page['cover'] = $config['base_url'].'/'.substr($page['cover'], 3);
   }
 ?>
 <!DOCTYPE html>
